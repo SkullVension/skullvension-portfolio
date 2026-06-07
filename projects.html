@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Projects — Vihan Mishra</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="shared.css">
+<style>
+.filter-row {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+}
+.filter-btn {
+  font-size: 13px;
+  font-weight: 500;
+  padding: 8px 18px;
+  border-radius: 100px;
+  border: 1px solid var(--border);
+  background: transparent;
+  color: var(--text-muted);
+  cursor: pointer;
+  transition: all 0.2s;
+  font-family: 'DM Sans', sans-serif;
+}
+.filter-btn:hover, .filter-btn.active {
+  border-color: var(--accent);
+  color: var(--accent);
+  background: var(--accent-dim);
+}
+.project-card[data-hidden="true"] { display: none; }
+
+.featured-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 36px;
+  margin-bottom: 24px;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 24px;
+  align-items: start;
+  transition: all 0.3s;
+  position: relative;
+  overflow: hidden;
+}
+.featured-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--accent), transparent);
+}
+.featured-card:hover {
+  border-color: var(--border-hover);
+  background: var(--surface-hover);
+}
+.featured-card .fc-icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 14px;
+  background: var(--accent-dim);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 26px;
+  margin-bottom: 20px;
+}
+.featured-card h2 {
+  font-family: 'Syne', sans-serif;
+  font-size: 22px;
+  font-weight: 800;
+  color: var(--text-primary);
+  margin-bottom: 10px;
+}
+.featured-card .fc-desc {
+  font-size: 15px;
+  color: var(--text-muted);
+  line-height: 1.6;
+  max-width: 500px;
+  margin-bottom: 20px;
+}
+.tech-chips {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.tech-chip {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 4px 10px;
+  border-radius: 6px;
+  background: rgba(255,255,255,0.05);
+  border: 1px solid var(--border);
+  color: var(--text-muted);
+}
+.fc-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--accent);
+  color: #0d1117;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 13px;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: all 0.2s;
+}
+.fc-link:hover { background: #79bbff; }
+@media (max-width: 640px) {
+  .featured-card { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+<nav class="nav">
+  <a href="index.html" class="nav-logo">VM</a>
+  <div class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="projects.html" class="active">Projects</a>
+    <a href="discord.html">Discord</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+  </div>
+  <button class="nav-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')">☰</button>
+</nav>
+
+<main>
+  <header class="page-header">
+    <span class="page-tag">// portfolio</span>
+    <h1>Projects</h1>
+    <p>Web tools, applications, and experiments I've shipped. Some live, some demos, all real work.</p>
+  </header>
+
+  <section class="section" style="padding-top: 0;">
+    <div class="section-title">Featured</div>
+
+    <div class="featured-card">
+      <div>
+        <div class="fc-icon">🕷️</div>
+        <h2>SenpaiSpider Fan Hub</h2>
+        <p class="fc-desc">A central directory and ranking system for community-made fan pages, featuring live rankings and resource links. My most community-driven project.</p>
+        <div class="tech-chips" style="margin-bottom: 20px;">
+          <span class="tech-chip">HTML</span>
+          <span class="tech-chip">CSS</span>
+          <span class="tech-chip">JavaScript</span>
+        </div>
+        <div class="tech-chips">
+          <a href="https://senpaispider-fan-hub.pages.dev/" target="_blank" class="project-link">Live Site →</a>
+        </div>
+      </div>
+      <a href="https://senpaispider-fan-hub.pages.dev/" target="_blank" class="fc-link">View Project ↗</a>
+    </div>
+
+    <div class="featured-card">
+      <div>
+        <div class="fc-icon">🧠</div>
+        <h2>PromptNest</h2>
+        <p class="fc-desc">Discover and share optimized AI prompts. Features real-time sync, custom collections, and seamless multi-platform integration. Built for the AI-first era.</p>
+        <div class="tech-chips" style="margin-bottom: 20px;">
+          <span class="tech-chip">JavaScript</span>
+          <span class="tech-chip">Web Tools</span>
+          <span class="tech-chip">Real-time</span>
+        </div>
+        <div class="tech-chips">
+          <a href="https://promptnestbeta.pages.dev/" target="_blank" class="project-link">Live Site →</a>
+        </div>
+      </div>
+      <a href="https://promptnestbeta.pages.dev/" target="_blank" class="fc-link">View Project ↗</a>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <section class="section">
+    <div class="section-title">All Projects</div>
+
+    <div class="filter-row">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="tool">Tools</button>
+      <button class="filter-btn" data-filter="demo">Demos</button>
+      <button class="filter-btn" data-filter="discord">Discord</button>
+    </div>
+
+    <div class="cards-grid">
+      <div class="project-card" data-type="tool">
+        <div class="project-card-top">
+          <div class="project-icon">🪝</div>
+          <span class="project-badge">Live</span>
+        </div>
+        <h3>VisualHook</h3>
+        <p>Tool for Discord developers to create and preview webhooks with easy customization. Essential for any Discord dev workflow.</p>
+        <a href="https://visualhook.pages.dev/" target="_blank" class="project-link">Visit Site →</a>
+      </div>
+
+      <div class="project-card" data-type="tool">
+        <div class="project-card-top">
+          <div class="project-icon">🔍</div>
+          <span class="project-badge">Live</span>
+        </div>
+        <h3>Hunter Info</h3>
+        <p>A clean, simple website featuring a profile/info display. Minimal and purposeful design.</p>
+        <a href="https://hunter-info.pages.dev/" target="_blank" class="project-link">Visit Site →</a>
+      </div>
+
+      <div class="project-card" data-type="discord">
+        <div class="project-card-top">
+          <div class="project-icon">🤖</div>
+          <span class="project-badge soon">Soon</span>
+        </div>
+        <h3>Discord Bot Site</h3>
+        <p>Landing page for a Discord bot. A full bot showcase site currently in development.</p>
+        <span class="project-link disabled">Coming Soon</span>
+      </div>
+
+      <div class="project-card" data-type="demo">
+        <div class="project-card-top">
+          <div class="project-icon">📚</div>
+          <span class="project-badge demo">Demo</span>
+        </div>
+        <h3>Coaching Center Demo</h3>
+        <p>A demo website for a coaching center project — clean layout with course info, schedule, and enrollment flow.</p>
+        <a href="https://coaching-center-demo.pages.dev/" target="_blank" class="project-link">View Demo →</a>
+      </div>
+
+      <div class="project-card" data-type="demo">
+        <div class="project-card-top">
+          <div class="project-icon">🧑‍💻</div>
+          <span class="project-badge demo">Demo</span>
+        </div>
+        <h3>Portfolio Demo</h3>
+        <p>A demo portfolio site to showcase different layout approaches for developer projects pages.</p>
+        <a href="https://portfolio-demo-site.pages.dev/" target="_blank" class="project-link">View Demo →</a>
+      </div>
+
+      <div class="project-card" data-type="demo">
+        <div class="project-card-top">
+          <div class="project-icon">🏪</div>
+          <span class="project-badge demo">Demo</span>
+        </div>
+        <h3>Small Business Demo</h3>
+        <p>Demo for a local small business website — bakery theme with menu, about, and contact sections.</p>
+        <a href="https://demo-bakery-site.pages.dev/" target="_blank" class="project-link">View Demo →</a>
+      </div>
+
+      <div class="project-card" data-type="demo">
+        <div class="project-card-top">
+          <div class="project-icon">🚀</div>
+          <span class="project-badge demo">Demo</span>
+        </div>
+        <h3>Landing Page Demo</h3>
+        <p>Landing page for an app or service — hero section, features grid, and call-to-action layout.</p>
+        <a href="https://business-landing-demo.pages.dev/" target="_blank" class="project-link">View Demo →</a>
+      </div>
+
+      <div class="project-card" data-type="tool">
+        <div class="project-card-top">
+          <div class="project-icon">🔐</div>
+          <span class="project-badge demo">Demo</span>
+        </div>
+        <h3>Password Strength Analyzer</h3>
+        <p>Interactive JavaScript tool that analyzes password strength in real-time with visual feedback.</p>
+        <a href="https://password-strength-analyzer.pages.dev/" target="_blank" class="project-link">Try It →</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <span>© 2026 Vihan Mishra</span>
+  <div class="footer-links">
+    <a href="https://github.com/SkullVension" target="_blank">GitHub</a>
+    <a href="https://discord.com/invite/7tSPQjtkhz" target="_blank">Discord</a>
+    <a href="https://www.instagram.com/skullvension/" target="_blank">Instagram</a>
+  </div>
+</footer>
+
+<script>
+const filterBtns = document.querySelectorAll('.filter-btn');
+const cards = document.querySelectorAll('.project-card[data-type]');
+filterBtns.forEach(btn => {
+  btn.addEventListener('click', () => {
+    filterBtns.forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    const filter = btn.dataset.filter;
+    cards.forEach(card => {
+      if (filter === 'all' || card.dataset.type === filter) {
+        card.removeAttribute('data-hidden');
+      } else {
+        card.setAttribute('data-hidden', 'true');
+      }
+    });
+  });
+});
+</script>
+</body>
+</html>

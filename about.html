@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About — Vihan Mishra</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="shared.css">
+<style>
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: start;
+}
+@media (max-width: 760px) {
+  .about-grid { grid-template-columns: 1fr; gap: 40px; }
+}
+.about-bio {
+  font-size: 16px;
+  color: var(--text-muted);
+  line-height: 1.8;
+}
+.about-bio p { margin-bottom: 20px; }
+.about-bio p:last-child { margin-bottom: 0; }
+.about-bio strong { color: var(--text-primary); font-weight: 600; }
+
+.skill-category {
+  margin-bottom: 32px;
+}
+.skill-cat-title {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: 14px;
+}
+.skill-bars {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.skill-bar-item {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.skill-bar-label {
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text-primary);
+}
+.skill-bar-label span { color: var(--text-muted); font-size: 12px; }
+.skill-bar-track {
+  height: 4px;
+  background: rgba(255,255,255,0.06);
+  border-radius: 2px;
+  overflow: hidden;
+}
+.skill-bar-fill {
+  height: 100%;
+  background: var(--accent);
+  border-radius: 2px;
+  transform-origin: left;
+  animation: fillBar 1.2s ease-out forwards;
+  transform: scaleX(0);
+}
+@keyframes fillBar {
+  to { transform: scaleX(1); }
+}
+
+.timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  position: relative;
+}
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 18px;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background: var(--border);
+}
+.tl-item {
+  display: flex;
+  gap: 24px;
+  padding-bottom: 36px;
+  position: relative;
+}
+.tl-item:last-child { padding-bottom: 0; }
+.tl-dot {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  flex-shrink: 0;
+  position: relative;
+  z-index: 1;
+  transition: border-color 0.2s;
+}
+.tl-item:hover .tl-dot { border-color: var(--accent); }
+.tl-content {
+  padding-top: 6px;
+}
+.tl-date {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 4px;
+}
+.tl-title {
+  font-family: 'Syne', sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 6px;
+}
+.tl-desc {
+  font-size: 14px;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
+.interests-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 14px;
+  margin-top: 32px;
+}
+.interest-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+  transition: all 0.2s;
+}
+.interest-card:hover {
+  border-color: var(--accent);
+  transform: translateY(-2px);
+}
+.interest-card .i-icon { font-size: 26px; margin-bottom: 8px; }
+.interest-card .i-name { font-size: 14px; font-weight: 600; color: var(--text-primary); }
+.interest-card .i-desc { font-size: 12px; color: var(--text-muted); margin-top: 2px; }
+</style>
+</head>
+<body>
+<nav class="nav">
+  <a href="index.html" class="nav-logo">VM</a>
+  <div class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="projects.html">Projects</a>
+    <a href="discord.html">Discord</a>
+    <a href="about.html" class="active">About</a>
+    <a href="contact.html">Contact</a>
+  </div>
+  <button class="nav-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')">☰</button>
+</nav>
+
+<main>
+  <header class="page-header">
+    <span class="page-tag">// about me</span>
+    <h1>Hey, I'm<br>Vihan.</h1>
+    <p>Developer, builder, and Discord community maker based in India.</p>
+  </header>
+
+  <section class="section" style="padding-top: 0;">
+    <div class="about-grid">
+      <div class="about-bio">
+        <p>I'm <strong>Vihan Mishra</strong> — a developer passionate about building modern websites, web tools, and digital experiences. I enjoy the challenge of turning ideas into things that actually work and look good.</p>
+        <p>My focus is <strong>Full-Stack development</strong> — creating clean, functional interfaces that serve a real purpose. Whether it's a fan hub, a productivity tool, or a Discord bot, I care about the details.</p>
+        <p>Beyond the web, I'm deep into <strong>Discord development</strong>. I run my own server, build bots with Discord.js, and create tools like VisualHook to make life easier for other Discord developers.</p>
+        <p>Always building. Always learning something new.</p>
+        <div style="margin-top: 32px;">
+          <a href="contact.html" style="display: inline-flex; align-items: center; gap: 8px; background: var(--accent); color: #0d1117; padding: 12px 24px; border-radius: 8px; font-weight: 600; font-size: 14px; text-decoration: none; transition: all 0.2s;">
+            Let's Connect →
+          </a>
+        </div>
+      </div>
+
+      <div>
+        <div class="skill-category">
+          <div class="skill-cat-title">Web Development</div>
+          <div class="skill-bars">
+            <div class="skill-bar-item">
+              <div class="skill-bar-label">HTML <span>Expert</span></div>
+              <div class="skill-bar-track"><div class="skill-bar-fill" style="width: 95%;"></div></div>
+            </div>
+            <div class="skill-bar-item">
+              <div class="skill-bar-label">CSS <span>Advanced</span></div>
+              <div class="skill-bar-track"><div class="skill-bar-fill" style="width: 88%; animation-delay: 0.1s;"></div></div>
+            </div>
+            <div class="skill-bar-item">
+              <div class="skill-bar-label">JavaScript <span>Intermediate</span></div>
+              <div class="skill-bar-track"><div class="skill-bar-fill" style="width: 72%; animation-delay: 0.2s;"></div></div>
+            </div>
+            <div class="skill-bar-item">
+              <div class="skill-bar-label">Web Design <span>Advanced</span></div>
+              <div class="skill-bar-track"><div class="skill-bar-fill" style="width: 85%; animation-delay: 0.3s;"></div></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="skill-category">
+          <div class="skill-cat-title">Discord Development</div>
+          <div class="skill-bars">
+            <div class="skill-bar-item">
+              <div class="skill-bar-label">Discord.js <span>Intermediate</span></div>
+              <div class="skill-bar-track"><div class="skill-bar-fill" style="width: 68%; animation-delay: 0.4s; background: #5865F2;"></div></div>
+            </div>
+            <div class="skill-bar-item">
+              <div class="skill-bar-label">Node.js <span>Intermediate</span></div>
+              <div class="skill-bar-track"><div class="skill-bar-fill" style="width: 65%; animation-delay: 0.5s; background: #5865F2;"></div></div>
+            </div>
+            <div class="skill-bar-item">
+              <div class="skill-bar-label">JSON <span>Advanced</span></div>
+              <div class="skill-bar-track"><div class="skill-bar-fill" style="width: 80%; animation-delay: 0.6s; background: #5865F2;"></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <section class="section">
+    <div class="section-title">Timeline</div>
+    <div class="timeline" style="max-width: 560px;">
+      <div class="tl-item">
+        <div class="tl-dot">🚀</div>
+        <div class="tl-content">
+          <div class="tl-date">2026</div>
+          <div class="tl-title">Portfolio v2 — This site</div>
+          <div class="tl-desc">Rebuilt the portfolio with separate pages, Discord section, and better project showcase.</div>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot">🧠</div>
+        <div class="tl-content">
+          <div class="tl-date">2025–2026</div>
+          <div class="tl-title">PromptNest & VisualHook</div>
+          <div class="tl-desc">Shipped two tools solving real problems — an AI prompt sharing platform and a Discord webhook builder.</div>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot">🤖</div>
+        <div class="tl-content">
+          <div class="tl-date">2025</div>
+          <div class="tl-title">Started Discord Development</div>
+          <div class="tl-desc">Dove into Discord.js and bot development. Launched my own server community.</div>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot">🕷️</div>
+        <div class="tl-content">
+          <div class="tl-date">2024–2025</div>
+          <div class="tl-title">SenpaiSpider Fan Hub</div>
+          <div class="tl-desc">First major community-driven project — a fan page directory and ranking system.</div>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot">💻</div>
+        <div class="tl-content">
+          <div class="tl-date">2023</div>
+          <div class="tl-title">Started Web Development</div>
+          <div class="tl-desc">Wrote first lines of HTML and CSS. Immediately got hooked on building things for the web.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <section class="section">
+    <div class="section-title">Interests & Focus Areas</div>
+    <div class="interests-grid">
+      <div class="interest-card">
+        <div class="i-icon">🌐</div>
+        <div class="i-name">Web Development</div>
+        <div class="i-desc">Clean, modern sites</div>
+      </div>
+      <div class="interest-card">
+        <div class="i-icon">🤖</div>
+        <div class="i-name">Bot Development</div>
+        <div class="i-desc">Discord automation</div>
+      </div>
+      <div class="interest-card">
+        <div class="i-icon">🎨</div>
+        <div class="i-name">Web Design</div>
+        <div class="i-desc">UI & visual craft</div>
+      </div>
+      <div class="interest-card">
+        <div class="i-icon">⚒️</div>
+        <div class="i-name">Dev Tools</div>
+        <div class="i-desc">Building for builders</div>
+      </div>
+      <div class="interest-card">
+        <div class="i-icon">🧠</div>
+        <div class="i-name">AI Prompts</div>
+        <div class="i-desc">PromptNest ecosystem</div>
+      </div>
+      <div class="interest-card">
+        <div class="i-icon">🫂</div>
+        <div class="i-name">Community</div>
+        <div class="i-desc">Discord server building</div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <span>© 2026 Vihan Mishra</span>
+  <div class="footer-links">
+    <a href="https://github.com/skullvension" target="_blank">GitHub</a>
+    <a href="https://discord.com/invite/7tSPQjtkhz" target="_blank">Discord</a>
+    <a href="https://www.instagram.com/skullvension/" target="_blank">Instagram</a>
+  </div>
+</footer>
+</body>
+</html>
