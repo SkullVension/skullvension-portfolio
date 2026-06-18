@@ -6,10 +6,9 @@ The official portfolio for **SkullVension**, serving as a centralized hub to sho
 
 ---
 
-## 🛠 Tech Stack & Design
+## 🛠 Tech Stack 
 
 - **Core Engine:** HTML5, CSS3, and JavaScript logic.
-- **Aesthetic:** High-contrast "Dark SaaS" layout featuring a cyber-modern color palette, glowing accents, and clean, responsive layouts.
 - **Hosting:** Deployed via Cloudflare Pages for instant, globally distributed loading speeds.
 
 ---
