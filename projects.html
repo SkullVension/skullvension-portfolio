@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Projects | Vihan Mishra</title>
+<meta name="description" content="Web tools, applications, and experiments built by Vihan Mishra.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/shared.css">
+<link rel="stylesheet" href="css/projects.css">
+</head>
+<body>
+<nav class="nav">
+  <a href="index.html" class="nav-logo">VM</a>
+  <div class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="projects.html" class="active">Projects</a>
+    <a href="bots.html">Bots</a>
+    <a href="discord.html">Discord</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+  </div>
+  <button class="nav-toggle" aria-label="Toggle navigation">☰</button>
+</nav>
+
+<main>
+  <header class="page-header">
+    <span class="page-tag">// portfolio</span>
+    <h1>Projects</h1>
+    <p>Web tools, applications, and experiments I've shipped. Some live, some demos, all real work.</p>
+  </header>
+
+  <section class="section" style="padding-top: 0;">
+    <div class="section-title">Featured</div>
+
+    <div class="featured-card">
+      <div>
+        <div class="fc-icon">🕷️</div>
+        <h2>PromptNest</h2>
+        <p class="fc-desc">Discover and share optimized AI prompts. Features real-time sync, custom collections, and seamless multi-platform integration. Built for the AI-first era.</p>
+        <div class="tech-chips" style="margin-bottom: 20px;">
+          <span class="tech-chip">JavaScript</span>
+          <span class="tech-chip">Web Tools</span>
+          <span class="tech-chip">Real-time</span>
+        </div>
+        <div class="tech-chips">
+          <a href="https://promptnestbeta.pages.dev/" target="_blank" rel="noopener" class="project-link">Live Site →</a>
+        </div>
+      </div>
+      <a href="https://promptnestbeta.pages.dev/" target="_blank" rel="noopener" class="fc-link">View Project ↗</a>
+    </div>
+
+    <div class="featured-card">
+      <div>
+        <div class="fc-icon">🎥</div>
+        <h2>Crafty Studios</h2>
+        <p class="fc-desc">A premium production and development studio specializing in custom Minecraft maps, mods, and custom in-game assets designed to help top YouTube content creators maximize watch time and channel growth.</p>
+        <div class="tech-chips" style="margin-bottom: 20px;">
+          <span class="tech-chip">HTML</span>
+          <span class="tech-chip">CSS</span>
+          <span class="tech-chip">JavaScript</span>
+        </div>
+        <div class="tech-chips">
+          <a href="https://craftystudios.pages.dev/" target="_blank" rel="noopener" class="project-link">Live Site →</a>
+        </div>
+      </div>
+      <a href="https://craftystudios.pages.dev/" target="_blank" rel="noopener" class="fc-link">View Project ↗</a>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <section class="section">
+    <div class="section-title">All Projects</div>
+
+    <div class="filter-row">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="tool">Tools</button>
+      <button class="filter-btn" data-filter="web">Web</button>
+      <button class="filter-btn" data-filter="demo">Demos</button>
+      <button class="filter-btn" data-filter="discord">Discord</button>
+    </div>
+
+    <div class="cards-grid">
+      <div class="project-card" data-type="discord">
+        <div class="project-card-top">
+          <div class="project-icon">🔗</div>
+          <span class="project-badge">Discord</span>
+        </div>
+        <h3>VisualHook</h3>
+        <p>Tool for Discord developers to create and preview webhooks with easy customization. Essential for any Discord dev workflow.</p>
+        <a href="https://visualhook.pages.dev/" target="_blank" rel="noopener" class="project-link">Visit Site →</a>
+      </div>
+
+      <div class="project-card" data-type="web">
+        <div class="project-card-top">
+          <div class="project-icon">🎥</div>
+          <span class="project-badge">Live</span>
+        </div>
+        <h3>Crafty Studios</h3>
+        <p>A premium production and development studio specializing in custom Minecraft maps, mods, and custom in-game assets designed to help top YouTube content creators maximize watch time and channel growth.</p>
+        <a href="https://craftystudios.pages.dev/" target="_blank" rel="noopener" class="project-link">Visit Site →</a>
+      </div>
+
+      <div class="project-card" data-type="web">
+        <div class="project-card-top">
+          <div class="project-icon">🔍</div>
+          <span class="project-badge">Live</span>
+        </div>
+        <h3>PromptNest</h3>
+        <p>Discover and share optimized AI prompts. Features real-time sync, custom collections, and seamless multi-platform integration. Built for the AI-first era.</p>
+        <a href="https://promptnest.pages.dev/" target="_blank" rel="noopener" class="project-link">Visit Site →</a>
+      </div>
+
+      <div class="project-card" data-type="web">
+        <div class="project-card-top">
+          <div class="project-icon">🕷</div>
+          <span class="project-badge">Live</span>
+        </div>
+        <h3>SenpaiSpider Fan Hub</h3>
+        <p>A central directory and ranking system for community-made fan pages, featuring live rankings and resource links. My most community-driven project.</p>
+        <a href="https://senpaispider-fan-hub.pages.dev/" target="_blank" rel="noopener" class="project-link">Visit Site →</a>
+      </div>
+
+      <div class="project-card" data-type="tool">
+        <div class="project-card-top">
+          <div class="project-icon">🔍</div>
+          <span class="project-badge">Live</span>
+        </div>
+        <h3>Hunter Info</h3>
+        <p>A clean, simple website featuring a profile/info display. Minimal and purposeful design.</p>
+        <a href="https://hunter-info.pages.dev/" target="_blank" rel="noopener" class="project-link">Visit Site →</a>
+      </div>
+
+      <div class="project-card" data-type="discord">
+        <div class="project-card-top">
+          <div class="project-icon">🤖</div>
+          <span class="project-badge">Discord</span>
+        </div>
+        <h3>Bot Setup Template</h3>
+        <p>A structured starter template for your next Discord bot. Includes pre-configured command handlers, error logging, and clean boilerplate code.</p>
+        <a href="https://github.com/SkullVension/Discord-Bot-Template" target="_blank" rel="noopener" class="project-link">Get Template →</a>
+      </div>
+
+      <div class="project-card" data-type="demo">
+        <div class="project-card-top">
+          <div class="project-icon">📚</div>
+          <span class="project-badge demo">Demo</span>
+        </div>
+        <h3>Coaching Center Demo</h3>
+        <p>A demo website for a coaching center project — clean layout with course info, schedule, and enrollment flow.</p>
+        <a href="https://coaching-center-demo.pages.dev/" target="_blank" rel="noopener" class="project-link">View Demo →</a>
+      </div>
+
+      <div class="project-card" data-type="demo">
+        <div class="project-card-top">
+          <div class="project-icon">🧑‍💻</div>
+          <span class="project-badge demo">Demo</span>
+        </div>
+        <h3>Portfolio Demo</h3>
+        <p>A demo portfolio site to showcase different layout approaches for developer projects pages.</p>
+        <a href="https://portfolio-demo-site.pages.dev/" target="_blank" rel="noopener" class="project-link">View Demo →</a>
+      </div>
+
+      <div class="project-card" data-type="demo">
+        <div class="project-card-top">
+          <div class="project-icon">🏪</div>
+          <span class="project-badge demo">Demo</span>
+        </div>
+        <h3>Small Business Demo</h3>
+        <p>Demo for a local small business website — bakery theme with menu, about, and contact sections.</p>
+        <a href="https://demo-bakery-site.pages.dev/" target="_blank" rel="noopener" class="project-link">View Demo →</a>
+      </div>
+
+      <div class="project-card" data-type="demo">
+        <div class="project-card-top">
+          <div class="project-icon">🚀</div>
+          <span class="project-badge demo">Demo</span>
+        </div>
+        <h3>Landing Page Demo</h3>
+        <p>Landing page for an app or service — hero section, features grid, and call-to-action layout.</p>
+        <a href="https://business-landing-demo.pages.dev/" target="_blank" rel="noopener" class="project-link">View Demo →</a>
+      </div>
+
+      <div class="project-card" data-type="tool">
+        <div class="project-card-top">
+          <div class="project-icon">🔐</div>
+          <span class="project-badge demo">Demo</span>
+        </div>
+        <h3>Passly</h3>
+        <p>Interactive JavaScript tool that analyzes password strength in real-time with visual feedback.</p>
+        <a href="https://passly.pages.dev/" target="_blank" rel="noopener" class="project-link">Try It →</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <span>© 2026 Vihan Mishra</span>
+  <div class="footer-links">
+    <a href="https://github.com/SkullVension" target="_blank" rel="noopener">GitHub</a>
+    <a href="https://discord.com/invite/7tSPQjtkhz" target="_blank" rel="noopener">Discord</a>
+    <a href="https://www.instagram.com/skullvension/" target="_blank" rel="noopener">Instagram</a>
+  </div>
+</footer>
+
+<script src="js/nav.js"></script>
+<script src="js/projects.js"></script>
+</body>
+</html>
