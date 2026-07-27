@@ -1,26 +1,73 @@
-# SkullVension Portfolio
+# Skullvension Portfolio
 
-The official portfolio for **SkullVension**, serving as a centralized hub to showcase automated developer tools, full-stack infrastructure, and professional community platforms.
+A modern, responsive personal portfolio website showcasing projects, skills, and professional experience.
 
-**🌐 Live Site:** [skullvension.pages.dev](https://skullvension.pages.dev)
-
----
-
-## 🛠 Tech Stack 
-
-- **Core Engine:** HTML5, CSS3, and JavaScript logic.
-- **Hosting:** Deployed via Cloudflare Pages for instant, globally distributed loading speeds.
+🌐 **Live Website:** [https://skullvension.pages.dev/](https://skullvension.pages.dev/)
 
 ---
 
-## 📂 Featured Ecosystem
+## Features
 
-This portal acts as the gateway to key projects managed under **The Skull** organization, including:
-
-* **PromptNest:** Github of Prompts
-* **VisualHook:** Web dashboard for managing and testing webhook payloads.
-* **Crafty Studios:** A premium production and development studio specializing in custom Minecraft maps, mods, and custom in-game assets designed to help top YouTube content creators maximize watch time and channel growth.
-
-
+- **Responsive Design:** Optimized for seamless viewing across mobile devices, tablets, and desktops.
+- **Project Showcase:** Highlights key works, complete with descriptions, tech stacks, and links.
+- **Skills & Expertise:** A clear breakdown of technical proficiencies and tools.
+- **Contact Section:** Easy ways to get in touch or connect professionally.
 
 ---
+
+## Built With
+
+- **HTML5** & **CSS3**
+- **JavaScript**
+- Hosted on **Cloudflare Pages**
+
+---
+
+## Getting Started
+
+Because this project is completely static, there are no dependencies to install or build tools required.
+
+### Prerequisites
+
+All you need is a web browser and a code editor (like VS Code) if you wish to make edits.
+
+### Local Setup
+
+1. **Clone the repository:**
+```bash
+git clone https://github.com/skullvension/skullvension-portfolio.git  
+```
+
+2. **Navigate to the project directory:**
+```bash
+cd skullvension-portfolio
+```
+3. **Open the project:**
+
+   - **Using a browser (GUI):** Double-click the `index.html` file to open it directly in your default web browser.
+   - **Using the terminal:**
+     - **Windows (Command Prompt / PowerShell):**
+       ```cmd
+       start index.html
+       ```
+     - **macOS:**
+       ```bash
+       open index.html
+       ```
+     - **Linux:**
+       ```bash
+       xdg-open index.html
+       ```
+   - **Using a Code Editor:** Open the folder in VS Code (or your preferred editor) and use an extension like **Live Server** to preview changes in real time.
+
+---
+
+## Deployment
+
+This static site is automatically deployed via Cloudflare Pages. Any changes pushed to the main branch trigger a deployment to update the live site.
+
+---
+
+## License
+
+This project is open-source and available under the [MIT License](LICENSE).
