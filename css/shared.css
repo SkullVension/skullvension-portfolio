@@ -27,8 +27,6 @@ body {
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
 }
-
-/* NAV */
 .nav {
   position: fixed;
   top: 0;
@@ -91,8 +89,6 @@ body {
   }
   .nav-links.open { display: flex; }
 }
-
-/* FOOTER */
 .footer {
   border-top: 1px solid var(--border);
   padding: 40px 5vw;
@@ -114,8 +110,6 @@ body {
   transition: color 0.2s;
 }
 .footer-links a:hover { color: var(--accent); }
-
-/* PAGE HEADER */
 .page-header {
   padding: 140px 5vw 60px;
 }
@@ -144,8 +138,6 @@ body {
   font-weight: 300;
   line-height: 1.6;
 }
-
-/* SECTION */
 .section {
   padding: 60px 5vw;
 }
@@ -167,15 +159,11 @@ body {
   height: 1px;
   background: var(--border);
 }
-
-/* CARDS GRID */
 .cards-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 20px;
 }
-
-/* PROJECT CARD */
 .project-card {
   background: var(--surface);
   border: 1px solid var(--border);
@@ -254,8 +242,6 @@ body {
   cursor: default;
   pointer-events: none;
 }
-
-/* SKILL TAG */
 .skill-tags {
   display: flex;
   flex-wrap: wrap;
@@ -276,10 +262,68 @@ body {
   color: var(--accent);
   background: var(--accent-dim);
 }
-
-/* DIVIDER LINE */
 .divider {
   height: 1px;
   background: var(--border);
   margin: 0 5vw;
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.reveal.revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
+.back-to-top {
+  position: fixed;
+  bottom: 28px;
+  right: 28px;
+  z-index: 90;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--text-primary);
+  font-size: 18px;
+  line-height: 1;
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: all 0.25s;
+}
+.back-to-top.visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+.back-to-top:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.skull-drop {
+  position: fixed;
+  top: -60px;
+  z-index: 9999;
+  pointer-events: none;
+  user-select: none;
+  animation: skull-fall linear forwards;
+}
+@keyframes skull-fall {
+  to {
+    transform: translateY(115vh) rotate(var(--spin, 360deg));
+  }
 }

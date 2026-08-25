@@ -219,3 +219,37 @@
   background: var(--border);
   align-self: stretch;
 }
+
+.view-all-btn {
+  margin-top: 32px;
+}
+
+.stack-marquee {
+  overflow: hidden;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  padding: 20px 0;
+}
+.stack-track {
+  display: flex;
+  align-items: center;
+  gap: 56px;
+  width: max-content;
+  padding-right: 56px;
+  white-space: nowrap;
+  font-family: 'Syne', sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  animation: marquee-scroll 26s linear infinite;
+}
+.stack-marquee:hover .stack-track { animation-play-state: paused; }
+@keyframes marquee-scroll {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .stack-track { animation: none; }
+}
